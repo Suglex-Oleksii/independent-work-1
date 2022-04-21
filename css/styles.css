@@ -5,12 +5,10 @@
   --hover-button-color: #188ce8;
   --background-footer-color: #2f303a;
   --background-header-color: #ffffff;
-  --background-first-color: none;
-  --background-second-color: #f5f4fa;
+   --background-second-color: #f5f4fa;
 }
 
 .body {
-  background-color: var(--background-first-color);
   color: var(--title-color);
   font-family: "Roboto", sans-serif;
 }
