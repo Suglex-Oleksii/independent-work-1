@@ -107,26 +107,26 @@
   line-height: 1.1;
   color: var(--title-color);
 }
-.text-advantages {
+.text-advantages-list {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.7;
   color: var(--text-color);
 }
-
+.card-team {
+  text-decoration: none;
+}
 .title-team-list {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.2;
   color: var(--title-color);
-  text-decoration: none;
 }
 .text-team-list {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.2;
   color: var(--text-color);
-  text-decoration: none;
 }
 
 .button-portfolio {
@@ -143,7 +143,9 @@
   background-color: var(--active-button-color);
   color: var(--background-header-color);
 }
-
+.card-portfolio {
+  text-decoration: none;
+}
 .title-portfolio-list {
   font-weight: 700;
   font-size: 18px;
@@ -188,3 +190,52 @@
 .address .link:focus {
   color: var(--background-header-color);
 }
+
+
+
+
+
+
+
+ul,
+p,
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: 1200px;
+  padding: 0 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.logo {
+  display: flex;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.contacts {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.navigator {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header .container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+}
+
