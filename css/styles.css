@@ -183,7 +183,6 @@
   color: var(--background-header-color);
 }
 
-
 ul,
 p,
 h1,
@@ -199,44 +198,36 @@ h4 {
   margin-left: auto;
   margin-right: auto;
 }
-
 .header-container,
 .nav,
 .navigator,
 .contacts {
   display: flex;
 }
-
 .nav {
   padding-top: 32px;
   padding-bottom: 32px;
 }
-
 .logo {
   margin-right: 93px;
   padding-top: 24px;
   padding-bottom: 24px;
   border-bottom: 1px;
 }
-
 .paragraph-navigator:not(:last-child) {
   margin-right: 50px;
 }
-
 .navigator {
   margin-right: 331px;
 }
-
 .paragraph-contacts:not(:last-child) {
   margin-right: 50px;
 }
-
 .hero-container {
   padding-top: 200px;
   padding-bottom: 200px;
   width: 1600px;
 }
-
 .title-hero {
   display: block;
   margin: 0 auto;
@@ -244,7 +235,6 @@ h4 {
   height: 120px;
   text-align: center;
 }
-
 .button-hero {
   width: 200px;
   height: 50px;
@@ -252,108 +242,87 @@ h4 {
   margin: 0 auto;
   margin-top: 35px;
 }
-
 .advantages-container,
 .team-container,
 .portfolio-container {
   padding-top: 94px;
   padding-bottom: 94px;
 }
-
 .paragraph-advantages:not(:last-child) {
   margin-right: 50px;
 }
-
 .paragraph-advantages {
   width: 270px;
 }
-
 .presentation-container {
   padding-bottom: 94px;
 }
-
 .list-advantages,
 .list-presentation,
 .list-team {
   display: flex;
 }
-
 .title-large {
   display: block;
   margin: 0 auto;
   text-align: center;
   margin-bottom: 50px;
 }
-
 .paragraph-presentation:not(:last-child) {
   margin-right: 30px;
 }
-
 .paragraph-team:not(:last-child) {
   margin-right: 30px;
 }
-
 .box-team-list {
   display: block;
   margin: 0 auto;
   text-align: center;
 }
-
 .title-team-list {
   margin-top: 30px;
   margin-bottom: 10px;
 }
-
 .text-team-list {
   margin-bottom: 30px;
 }
-
 .list-button,
 .list-portfolio {
   display: flex;
 }
-
 .list-portfolio {
   flex-wrap: wrap;
 }
-
 .list-button {
   margin: 0 auto;
   margin-bottom: 56px;
   justify-content: center;
 }
-
 .paragraph-button-portfolio:not(:last-child) {
   margin-right: 8px;
 }
-
 .button-portfolio {
   padding: 6px 22px;
 }
-
 .box-portfolio-list {
   display: block;
   margin: 0 auto;
-  
 }
-
 .title-portfolio-list {
   margin-top: 20px;
   margin-bottom: 4px;
 }
-
 .text-portfolio-list {
   margin-bottom: 20px;
 }
-
-
-
-
-
-
-
-
-
+.paragraph-card-portfolio:not(:last-child) {
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+.list-portfolio {
+  margin-right: -30px;
+  margin-bottom: -30px;
+}
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
