@@ -12,8 +12,10 @@
   color: var(--title-color);
   font-family: "Roboto", sans-serif;
 }
+
 .header {
   background-color: var(--background-header-color);
+  border-bottom: 1px solid transparent;
 }
 .header .logo {
   font-family: "Raleway", sans-serif;
@@ -22,15 +24,12 @@
   line-height: 1.2;
   color: var(--active-button-color);
   text-decoration: none;
+  display: block;
 }
 .header .logo-right {
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.2;
   color: var(--title-color);
-  text-decoration: none;
 }
+
 .navigator .link {
   font-weight: 500;
   font-size: 14px;
@@ -38,32 +37,26 @@
   color: var(--title-color);
   text-decoration: none;
 }
-.link-studio.current,
-.link-portfolio.current {
+.navigator .link.current {
   color: var(--active-button-color);
-  font-weight: 500;
-  font-size: 14px;
-  text-decoration: none;
 }
 .navigator .link:hover,
 .navigator .link:focus,
 .navigator .link:active {
   color: var(--active-button-color);
 }
-.link-mail,
-.link-tel {
+.contacts .link {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.1;
   color: var(--text-color);
   text-decoration: none;
 }
-.link-mail:hover,
-.link-mail:focus,
-.link-tel:hover,
-.link-tel:focus {
+.contacts .link:hover,
+.contacts .link:focus {
   color: var(--active-button-color);
 }
+
 .hero {
   background-color: var(--background-footer-color);
 }
@@ -72,6 +65,7 @@
   font-size: 44px;
   line-height: 1.4;
   color: var(--background-header-color);
+  text-align: center;
 }
 .button-hero {
   background-color: var(--active-button-color);
@@ -88,6 +82,7 @@
   background-color: var(--hover-button-color);
   color: var(--background-header-color);
 }
+
 .title-large {
   font-weight: 700;
   font-size: 36px;
@@ -106,8 +101,12 @@
   line-height: 1.7;
   color: var(--text-color);
 }
-.card-team {
+.box-team-list {
   text-decoration: none;
+}
+
+.team-section {
+  background-color: var(--background-second-color);
 }
 .title-team-list {
   font-weight: 500;
@@ -156,22 +155,17 @@
 }
 .footer .logo {
   font-family: "Raleway", sans-serif;
-  font-weight: 400;
+  font-weight: 700;
   font-size: 26px;
   line-height: 1.2;
   color: var(--active-button-color);
   text-decoration: none;
 }
 .footer .logo-right {
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.2;
   color: var(--background-header-color);
-  text-decoration: none;
 }
 .address .link {
-  font-weight: 400;
+  font-weight: 700;
   font-size: 14px;
   line-height: 1.7;
   color: rgba(255, 255, 255, 0.6);
@@ -191,6 +185,12 @@ h3,
 h4 {
   margin: 0;
   padding: 0;
+  list-style: none;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 .container {
   width: 1200px;
@@ -198,64 +198,73 @@ h4 {
   margin-left: auto;
   margin-right: auto;
 }
-.header-container,
-.nav,
-.navigator,
-.contacts {
-  display: flex;
-}
-.nav {
-  padding-top: 32px;
-  padding-bottom: 32px;
-}
-.logo {
-  margin-right: 93px;
-  padding-top: 24px;
-  padding-bottom: 24px;
-  border-bottom: 1px;
-}
-.paragraph-navigator:not(:last-child) {
-  margin-right: 50px;
-}
-.navigator {
-  margin-right: 331px;
-}
-.paragraph-contacts:not(:last-child) {
-  margin-right: 50px;
-}
-.hero-container {
-  padding-top: 200px;
-  padding-bottom: 200px;
-  width: 1600px;
-}
-.title-hero {
-  display: block;
-  margin: 0 auto;
-  width: 696px;
-  height: 120px;
-  text-align: center;
-}
-.button-hero {
-  width: 200px;
-  height: 50px;
-  display: block;
-  margin: 0 auto;
-  margin-top: 35px;
-}
-.advantages-container,
-.team-container,
-.portfolio-container {
+.section {
   padding-top: 94px;
   padding-bottom: 94px;
 }
+
+.header-container,
+.nav {
+  display: flex;
+  align-items: center;
+}
+.navigator {
+  display: flex;
+  margin-left: 93px;
+}
+.contacts {
+  display: flex;
+  margin-left: auto;
+}
+.navigator .paragraph-navigator + .paragraph-navigator {
+  margin-left: 50px;
+}
+.contacts .paragraph-contacts + .paragraph-contacts {
+  margin-left: 50px;
+}
+.paragraph-navigator > .link,
+.paragraph-contacts > .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.hero {
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+.title-hero {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  width: 696px;
+}
+.button-hero {
+  min-width: 200px;
+  padding: 10px 32px;
+  display: block;
+  margin: 0 auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .paragraph-advantages:not(:last-child) {
-  margin-right: 50px;
+  margin-right: 30px;
 }
 .paragraph-advantages {
-  width: 270px;
+  max-width: 270px;
 }
-.presentation-container {
-  padding-bottom: 94px;
+.title-advantages-list {
+  margin-bottom: 10px;
 }
 .list-advantages,
 .list-presentation,
@@ -268,6 +277,10 @@ h4 {
   text-align: center;
   margin-bottom: 50px;
 }
+
+.presentation-section {
+  padding-top: 0;
+}
 .paragraph-presentation:not(:last-child) {
   margin-right: 30px;
 }
@@ -276,16 +289,15 @@ h4 {
 }
 .box-team-list {
   display: block;
+  padding-top: 30px;
+  padding-bottom: 30px;
   margin: 0 auto;
   text-align: center;
 }
 .title-team-list {
-  margin-top: 30px;
   margin-bottom: 10px;
 }
-.text-team-list {
-  margin-bottom: 30px;
-}
+
 .list-button,
 .list-portfolio {
   display: flex;
@@ -294,8 +306,7 @@ h4 {
   flex-wrap: wrap;
 }
 .list-button {
-  margin: 0 auto;
-  margin-bottom: 56px;
+  margin-bottom: 50px;
   justify-content: center;
 }
 .paragraph-button-portfolio:not(:last-child) {
@@ -305,15 +316,12 @@ h4 {
   padding: 6px 22px;
 }
 .box-portfolio-list {
-  display: block;
-  margin: 0 auto;
+  padding: 20px 24px;
+  border: 1px solid #eeeeee;
+  border-top: 0;
 }
 .title-portfolio-list {
-  margin-top: 20px;
   margin-bottom: 4px;
-}
-.text-portfolio-list {
-  margin-bottom: 20px;
 }
 .paragraph-card-portfolio:not(:last-child) {
   margin-right: 30px;
@@ -323,10 +331,14 @@ h4 {
   margin-right: -30px;
   margin-bottom: -30px;
 }
+
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
 }
 .address {
   margin-top: 20px;
+}
+.paragraph-address:not(:last-child) {
+  margin-bottom: 9px;
 }
