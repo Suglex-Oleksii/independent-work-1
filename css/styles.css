@@ -165,10 +165,15 @@
   color: var(--background-header-color);
 }
 .address .link {
-  font-weight: 700;
+  font-weight: 400;
   font-size: 14px;
   line-height: 1.7;
   color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  font-style: normal;
+}
+.link-address {
+  color: var(--background-header-color);
   text-decoration: none;
   font-style: normal;
 }
@@ -323,7 +328,7 @@ img {
 .title-portfolio-list {
   margin-bottom: 4px;
 }
-.paragraph-card-portfolio:not(:last-child) {
+.paragraph-card-portfolio {
   margin-right: 30px;
   margin-bottom: 30px;
 }
