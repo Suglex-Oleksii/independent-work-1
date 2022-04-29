@@ -52,12 +52,51 @@
   color: var(--text-color);
   text-decoration: none;
 }
-.contacts .link:hover,
-.contacts .link:focus {
+
+.paragraph-contacts > .link:hover,
+.paragraph-contacts > .link:focus {
   color: var(--active-button-color);
 }
 
+.icon-mail {
+  box-sizing: content-box;
+  width: 16px;
+  height: 12px;
+  padding-right: 10px;
+  fill: #757575;
+  cursor: pointer;
+}
+
+.icon-tel {
+  box-sizing: content-box;
+  width: 10px;
+  height: 16px;
+  padding-right: 10px;
+  fill: #757575;
+  cursor: pointer;
+}
+
+.icon-mail:hover,
+.icon-tel:hover,
+.icon-mail:focus,
+.icon-tel:focus {
+  fill: #2196f3;
+}
+
 .hero {
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../images/studio/hero/hero.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   background-color: var(--background-footer-color);
 }
 .title-hero {
@@ -100,7 +139,83 @@
   font-size: 14px;
   line-height: 1.7;
   color: var(--text-color);
+  letter-spacing: 0.03em;
 }
+
+.paragraph-advantages::before {
+  display: block;
+  content: " ";
+  height: 120px;
+  border-radius: 4px;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #f5f4fa;
+  margin-bottom: 30px;
+}
+
+.icon-antenna::before {
+  background-image: url(../images/icons.svg/advantages/antenna.svg);
+}
+.icon-clock::before {
+  background-image: url(../images/icons.svg/advantages/clock.svg);
+}
+.icon-diagram::before {
+  background-image: url(../images/icons.svg/advantages/diagram.svg);
+}
+.icon-astronaut::before {
+  background-image: url(../images/icons.svg/advantages/astronaut.svg);
+}
+
+.paragraph-team {
+  width: 270px;
+  height: 428px;
+  background-color: #ffffff;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+.list-team-messengers {
+  display: flex;
+  margin: 16px 32px 30px 32px;
+}
+
+.paragraph-team-messengers {
+  width: 44px;
+  height: 44px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  content: " ";
+}
+.paragraph-team-messengers:not(:last-child) {
+  margin-right: 10px;
+}
+
+.paragraph-team-messengers:hover,
+.paragraph-team-messengers:focus {
+  background-color: #2196f3;
+}
+
+.icon-team {
+  box-sizing: content-box;
+  width: 20px;
+  height: 20px;
+  fill: #afb1b8;
+  cursor: pointer;
+  padding: 12px;
+}
+
+.icon-team:hover,
+.icon-team:focus {
+  fill: #ffffff;
+}
+
 .box-team-list {
   text-decoration: none;
 }
@@ -108,6 +223,7 @@
 .team-section {
   background-color: var(--background-second-color);
 }
+
 .title-team-list {
   font-weight: 500;
   font-size: 16px;
@@ -134,10 +250,22 @@
 .button-portfolio:focus {
   background-color: var(--active-button-color);
   color: var(--background-header-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+
 .card-portfolio {
   text-decoration: none;
 }
+
+.paragraph-card-portfolio:hover,
+.paragraph-card-portfolio:focus {
+  width: 370px;
+  height: 404px;
+  border-color: 1px solid #eeeeee;
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    0px 1px 1px rgba(0, 0, 0, 0.12);
+}
+
 .title-portfolio-list {
   font-weight: 700;
   font-size: 18px;
@@ -153,6 +281,7 @@
 .footer {
   background-color: var(--background-footer-color);
 }
+
 .footer .logo {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
@@ -179,6 +308,13 @@
 }
 .address .link:hover,
 .address .link:focus {
+  color: var(--background-header-color);
+}
+
+.title-messengers {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.1;
   color: var(--background-header-color);
 }
 
@@ -229,7 +365,8 @@ img {
 }
 .paragraph-navigator > .link,
 .paragraph-contacts > .link {
-  display: block;
+  display: inline-flex;
+  align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
 }
@@ -273,7 +410,8 @@ img {
 }
 .list-advantages,
 .list-presentation,
-.list-team {
+.list-team,
+.list-customers {
   display: flex;
 }
 .title-large {
@@ -295,7 +433,7 @@ img {
 .box-team-list {
   display: block;
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 16px;
   margin: 0 auto;
   text-align: center;
 }
@@ -337,13 +475,132 @@ img {
   margin-bottom: -30px;
 }
 
+.paragraph-customers:not(:last-child) {
+  margin-right: 30px;
+}
+
+.paragraph-customers {
+  width: 170px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+
+  cursor: pointer;
+}
+.paragraph-customers:hover,
+.paragraph-customers:focus {
+  border-color: #2196f3;
+}
+
+.client {
+  box-sizing: content-box;
+  width: 106px;
+  height: 60px;
+  fill: #afb1b8;
+  cursor: pointer;
+  padding: 16px 32px;
+}
+.client:hover,
+.client:focus {
+  fill: #2196f3;
+}
+
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
 }
+
+.footer-container {
+  display: flex;
+}
+
 .address {
   margin-top: 20px;
 }
 .paragraph-address:not(:last-child) {
   margin-bottom: 9px;
+}
+
+.footer-address {
+  width: 235px;
+}
+
+.footer-messengers {
+  margin-left: 70px;
+  margin-top: 12px;
+  width: 206px;
+}
+
+.list-messengers {
+  display: flex;
+  margin-top: 20px;
+}
+
+.paragraph-messengers {
+  width: 44px;
+  height: 44px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  content: " ";
+}
+.paragraph-messengers:not(:last-child) {
+  margin-right: 10px;
+}
+
+.paragraph-messengers:hover,
+.paragraph-messengers:focus {
+  background-color: #2196f3;
+}
+.icon {
+  box-sizing: content-box;
+  width: 20px;
+  height: 20px;
+  fill: #ffffff;
+  cursor: pointer;
+  padding: 12px;
+}
+
+
+
+
+
+.paragraph-team::before {
+  display: inline-block;
+  position: absolute;
+  content: " ";
+  width: 50%;
+  height: 50%;
+  background-color: #2196f3;
+  opacity: 0;
+  transition: 500ms opacity linear;
+}
+
+.paragraph-team:hover::before {
+  opacity: 1;
+}
+
+
+
+.paragraph-team {
+  outline: 1px solid red;
+  position: relative;
+  
+}
+
+.paragraph-team:hover .list-team-messengers{
+  opacity: 1;
+}
+
+.list-team-messengers {
+  outline: 1px solid green;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: 500ms opacity linear;
 }
