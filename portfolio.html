@@ -81,14 +81,26 @@
           </ul>
           <ul class="list-portfolio">
             <li class="paragraph-card-portfolio">
-              <a class="card-portfolio" href=""
-                ><img
-                  class="img-portfolio"
-                  src="./images/portfolio/projects/img-1.jpg"
-                  alt="Веб сайт-Технокряк"
-                  width="370"
-                  height="294"
-                />
+              <a class="card-portfolio" href="">
+<!-- ПЕРЕНЕСТИ В ДЗ-5 !!! -->
+                <div class="thumb-portfolio">
+                  <img
+                    class="img-portfolio"
+                    src="./images/portfolio/projects/img-1.jpg"
+                    alt="Веб сайт-Технокряк"
+                    width="370"
+                    height="294"
+                  />
+                  <div class="box-portfolio">
+                    <p class="text-box-portfolio">
+                      Ресурс предлагает комплексные предложения с разным уровнем
+                      функционала и сервисов. Все это позволит посетителю
+                      получить исчерпывающие сведения о компании или частном
+                      лице.
+                    </p>
+                  </div>
+                </div>
+<!-- ПЕРЕНЕСТИ В ДЗ-5 !!! -->
                 <div class="box-portfolio-list">
                   <h2 class="title-portfolio-list">Технокряк</h2>
                   <p class="text-portfolio-list">Веб-сайт</p>
@@ -97,13 +109,27 @@
             </li>
             <li class="paragraph-card-portfolio">
               <a class="card-portfolio" href=""
-                ><img
-                  class="img-portfolio"
-                  src="./images/portfolio/projects/img-2.jpg"
-                  alt="Дизайн-Постер Новый Орлеан против Золотой Звезды"
-                  width="370"
-                  height="294"
-                />
+                >
+<!-- ПЕРЕНЕСТИ В ДЗ-5 !!! -->
+                <div class="thumb-portfolio">
+                  <img
+                    class="img-portfolio"
+                    src="./images/portfolio/projects/img-2.jpg"
+                    alt="Дизайн-Постер Новый Орлеан против Золотой Звезды"
+                    width="370"
+                    height="294"
+                  />
+                  <div class="box-portfolio">
+                    <p class="text-box-portfolio">
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Amet aliquid saepe vel, delectus temporibus explicabo sed?
+                      Odit possimus nesciunt alias officia soluta natus
+                      voluptatum doloribus laboriosam, officiis voluptates unde!
+                      Dolore?
+                    </p>
+                  </div>
+                </div>
+<!-- ПЕРЕНЕСТИ В ДЗ-5 !!! -->
                 <div class="box-portfolio-list">
                   <h2 class="title-portfolio-list">
                     Постер-New-Orlean-vs-Golden-Star
@@ -308,5 +334,14 @@
         </div>
       </div>
     </footer>
+<!-- Фиксация хедера через Джава Скрипт -->
+    <script>
+      const { height: HeaderHeigt } = document
+        .querySelector(".header")
+        .getBoundingClientRect();
+
+      document.body.style.paddingTop = "${HeaderHeigt}px";
+    </script>
+<!-- Фиксация хедера через Джава Скрипт -->
   </body>
 </html>
